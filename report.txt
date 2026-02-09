@@ -1,0 +1,103 @@
+
+====================================================================================================
+OWN FUNDS - COREP REGULATORY REPORT
+====================================================================================================
+
+Template: OF (v1.0)
+Description: COREP Own Funds template for reporting total capital
+Generated: 2026-02-09 15:16:57
+
+====================================================================================================
+REPORTED VALUES
+====================================================================================================
+
+
+Field:       OF_101
+Name:        Common Equity Tier 1 (CET1) Capital
+Type:        decimal
+Required:    Yes
+Value:       1500.0
+Confidence:  90.0%
+Instructions: Sum of eligible common equity tier 1 items
+Reference:   CRR Article 50
+Rules:       CRR_50_1, PRA_RULE_1
+--------------------------------------------------
+
+Field:       OF_102
+Name:        Additional Tier 1 (AT1) Capital
+Type:        decimal
+Required:    Yes
+Value:       300.0
+Confidence:  88.0%
+Instructions: Eligible AT1 instruments meeting CRR criteria
+Reference:   CRR Article 51
+Rules:       CRR_51_1, PRA_RULE_1
+--------------------------------------------------
+
+Field:       OF_103
+Name:        Tier 1 Capital Total
+Type:        decimal
+Required:    Yes
+Value:       1800.0
+Confidence:  95.0%
+Instructions: Calculated field: OF_101 + OF_102
+Reference:   CRR Article 49
+Rules:       CRR_Article_49, PRA_RULE_1
+--------------------------------------------------
+
+Field:       OF_201
+Name:        Tier 2 (T2) Capital
+Type:        decimal
+Required:    Yes
+Value:       250.0
+Confidence:  85.0%
+Instructions: Eligible Tier 2 instruments
+Reference:   CRR Article 62
+Rules:       CRR_62_1, PRA_RULE_1
+--------------------------------------------------
+
+Field:       OF_300
+Name:        Total Own Funds
+Type:        decimal
+Required:    Yes
+Value:       2050.0
+Confidence:  95.0%
+Instructions: Calculated field: OF_103 + OF_201
+Reference:   CRR Article 48
+Rules:       CRR_Article_48, COREP_OWN_FUNDS
+--------------------------------------------------
+
+Field:       OF_301
+Name:        Reporting Date
+Type:        date
+Required:    Yes
+Value:       2024-12-31
+Confidence:  99.0%
+Instructions: End of quarter date in ISO format (YYYY-MM-DD)
+Reference:   COREP ITS
+Rules:       COREP_OWN_FUNDS
+--------------------------------------------------
+
+====================================================================================================
+MASTER RULES VALIDATION
+====================================================================================================
+
+
+Rule ID:     MR_001
+Description: Tier 1 Total must equal sum of CET1 and AT1
+Formula:     OF_103 = OF_101 + OF_102
+
+
+Rule ID:     MR_002
+Description: Total Own Funds must equal Tier 1 plus Tier 2
+Formula:     OF_300 = OF_103 + OF_201
+
+
+Rule ID:     MR_003
+Description: All capital amounts must be non-negative
+Formula:     
+
+
+====================================================================================================
+END OF REPORT
+====================================================================================================
