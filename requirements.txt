@@ -1,0 +1,15 @@
+# Requirements for LLM-Assisted COREP Reporting Assistant
+
+# Core requirements
+# Python 3.8+
+
+# Optional - for real LLM support (OpenAI API)
+# Uncomment to enable OpenAI integration
+# openai>=1.0.0
+
+# Development/Testing (optional)
+# pytest>=7.0
+# coverage>=6.0
+
+# Note: The core system works with Python standard library only.
+# OpenAI library is optional for production LLM integration.
