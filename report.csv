@@ -1,0 +1,7 @@
+Field ID,Field Name,Data Type,Required,Value
+OF_101,"Common Equity Tier 1 (CET1) Capital",decimal,Yes,1500.0
+OF_102,"Additional Tier 1 (AT1) Capital",decimal,Yes,300.0
+OF_103,"Tier 1 Capital Total",decimal,Yes,1800.0
+OF_201,"Tier 2 (T2) Capital",decimal,Yes,250.0
+OF_300,"Total Own Funds",decimal,Yes,2050.0
+OF_301,"Reporting Date",date,Yes,2024-12-31
